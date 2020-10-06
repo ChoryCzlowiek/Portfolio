@@ -32,70 +32,89 @@ setTimeout(() => {
     changeJobName();
 }, 2000);
 
-// Remove old active icon
+// Remove active style of old icon
 
-function removeUnactiveIcon() {
-    const indexOfActiveIcon = navIcons.findIndex((icon) => icon.classList.contains('navigation__icon--active'));
+function changeOldIcon() {
 
-    if (indexOfActiveIcon != -1) {
-        navIcons[indexOfActiveIcon].classList.remove('navigation__icon--active');
-        navIcons[indexOfActiveIcon].style.pointerEvents = 'auto';
-    }
+    const oldIcon = navIcons.find(icon => icon.classList.contains('navigation__icon--active'));
+
+    oldIcon.classList.remove('navigation__icon--active');
 }
 
-// Show and hide sites
+// Remove site from window and hideSite animation
 
-function toggleSites(iconId) {
-    const unactiveSite = sites.find(site => site.classList.contains('active'));
+function moveOutSite() {
 
-    if (unactiveSite) {
-        unactiveSite.style.animation = 'hideSite 1s linear both';
-        unactiveSite.classList.remove('active');
+    const oldSite = sites.find(site => site.classList.contains('active-site'));
 
-        const activeSite = sites.find((site) => site.classList.contains(iconId));
+    if (oldSite) {
 
-        if (iconId != 'home' || iconId != unactiveSite.id) {
-            activeSite.style.display = 'block';
-            activeSite.style.animation = 'showSite 1s linear 1s both';
-            activeSite.classList.add('active');
-        }
+        oldSite.style.animation = 'hideSite 1s linear both';
+        oldSite.classList.remove('active-site');
 
         setTimeout(() => {
-            unactiveSite.style.animation = '';
-            unactiveSite.style.display = 'none';
+            oldSite.style.display = 'none';
+        }, 1000);
 
+        return true;
+
+    } else return false;
+
+}
+
+// Add site visible and add showSite animation
+
+function moveInSite(iconId, ifOldSite) {
+
+    const activeSite = sites.find(site => site.classList.contains(iconId));
+    activeSite.style.display = 'block';
+    activeSite.classList.add('active-site');
+
+    if (ifOldSite) {
+
+        activeSite.style.animation = 'showSite 1s linear 1s both';
+        setTimeout(() => {
             navIcons.forEach(icon => icon.style.pointerEvents = 'auto');
         }, 2000)
 
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 1000)
     } else {
-        const activeSite = sites.find((site) => site.classList.contains(iconId));
 
-        if (iconId != 'home' || iconId != unactiveSite.id) {
-            activeSite.style.display = 'block';
-            activeSite.style.animation = 'showSite 1s linear both';
-            activeSite.classList.add('active');
+        activeSite.style.animation = 'showSite 1s linear both';
+        setTimeout(() => {
+            navIcons.forEach(icon => icon.style.pointerEvents = 'auto');
+        }, 1000)
 
-            setTimeout(() => {
-                navIcons.forEach(icon => icon.style.pointerEvents = 'auto');
-            }, 1000)
-        }
     }
 }
 
-// Switch sites by the nav
+// Switch site main function
 
 function switchSite() {
-    removeUnactiveIcon();
-    this.classList.add('navigation__icon--active');
+
     navIcons.forEach(icon => icon.style.pointerEvents = 'none');
+
+    if (this.classList.contains('navigation__icon--active')) {
+
+        this.classList.remove('navigation__icon--active');
+        const home = navIcons.find(icon => icon.id = 'home');
+        home.classList.add('navigation__icon--active');
+
+    } else {
+
+        changeOldIcon();
+        this.classList.add('navigation__icon--active');
+
+    }
 
     const iconId = this.id;
 
-    toggleSites(iconId);
+    const ifOldSite = moveOutSite();
+
+    if (iconId != 'home') moveInSite(iconId, ifOldSite);
+    else setTimeout(() => { navIcons.forEach(icon => icon.style.pointerEvents = 'auto'); }, 1000)
 }
+
+// Click icon efect
 
 navIcons.forEach((icon) => {
     icon.addEventListener('click', switchSite);
