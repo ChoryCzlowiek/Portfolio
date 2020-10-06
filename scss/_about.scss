@@ -1,0 +1,169 @@
+.about{
+    position:absolute;
+    padding: 0 0 5rem 0;
+    width: 91%; min-height: 100vh;
+    top: 0; left: 100%;
+    background-color:$lightBlack;
+    display: none;
+
+    &__title{
+        margin: 4rem 0;
+        text-align:center;
+        font-family: $titleFont;
+        letter-spacing:1px;
+        font-size:3.5rem;
+        position:relative;
+
+        &::before{
+        content:'';
+        position:absolute;
+        top: 100%; left: 45%;
+        height: 2px; width: 10%;
+        background-color:$lightGreen;
+        }
+    }
+
+    .main-info{
+        margin:0 auto;
+        padding: 3rem 1rem;
+        width: 80%;
+        background-color:$black;
+        border-radius:10px;
+        display:flex;
+        align-items:center;
+
+        &__img{
+            min-width:300px; height: 300px;
+            border-radius:50%;
+            background-image: url(../images/me.jpg);
+            background-size:cover;
+            opacity:.9;
+        }
+
+        &__text-container{
+            margin:0 2rem;
+        }
+
+        &__name{
+            font-family: titleFont;
+            letter-spacing:1px;
+            font-size:1.5rem;
+        }
+
+        &__city{
+            margin:1rem 0;
+            color:$lightGreen;
+            opacity:.3;
+        }
+
+        &__text{
+            line-height: 1.4;
+        }
+    }
+
+    &__subtitle{
+        margin:10rem auto 4rem;
+        text-align:center;
+        font-family: $titleFont;
+        letter-spacing:1px;
+        font-size:2.5rem;
+        text-shadow: 0 0 10px green, 0 0 30px green;
+        position:relative;
+
+        &::before{
+            content:'';
+            position:absolute;
+            top: 100%; left: 45%;
+            height: 2px; width: 10%;
+            background-color:$lightGreen;
+        }
+    }
+
+    .interests-wrapper{
+        margin:0 auto;
+        padding: 2rem 1rem;
+        width: 80%;
+        background-color:$black;
+        border-radius:10px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__box{
+            margin: 1rem 0;
+            padding: .8rem 0;
+            flex-basis: 21%;
+            background-color: $lightBlack;
+            border-radius: 5px;
+            display: flex;
+        }
+
+        &__icon{
+            padding: 0 .7rem;
+            font-size: 1.5rem;
+            color: $lightGreen;
+            border-right: 3px solid $black;
+        }
+
+        &__interest{
+            padding: 0 .7rem;
+        }
+    }
+
+    .edu-box{
+        margin: 0 auto;
+        width: 80%; height: 80vh;
+        position: relative;
+
+        &__bar{
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 20px;
+            background-color: $lightGreen;
+            border-radius: 10px;
+            border: 5px solid black;
+        }
+
+        &__line{
+            position: absolute;
+            top: 10%; left: 50%;
+            width: 40vw; height: 3px;
+            background-color: $lightGreen;
+            border-radius:5px;
+
+            &:nth-of-type(odd){
+                left: calc(-40vw + 10px);
+            }
+
+            &:nth-of-type(2){
+                top: 30%;
+            }
+
+            &:nth-of-type(3){
+                top: 50%;
+
+            }
+            &:nth-of-type(4){
+                top: 70%;
+            }
+
+            &:nth-of-type(5){
+                top: 90%;
+            }
+        }
+
+        &__school{
+            position: absolute;
+            top: -6vh;left: 50%;
+            width: 70%;
+            transform: translateX(-50%);
+            text-align: center;
+
+            &:nth-of-type(even){
+                        left: 20px;
+            }
+        }
+    }
+}

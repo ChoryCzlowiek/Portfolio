@@ -1,0 +1,79 @@
+.contact{
+    position:absolute;
+    padding: 0 0 5rem 0;
+    width: 91%; min-height: 100vh;
+    top: 0; left: 100%;
+    background-color:$lightBlack;
+    display: none;
+
+    &__title{
+        margin: 4rem 0;
+        text-align:center;
+        font-family: $titleFont;
+        letter-spacing:1px;
+        font-size:3.5rem;
+        position:relative;
+
+        &::before{
+        content:'';
+        position:absolute;
+        top: 100%; left: 45%;
+        height: 2px; width: 10%;
+        background-color:$lightGreen;
+        }
+    }
+
+    .form{
+        margin:0 auto;
+        padding: 3rem 1rem;
+        width: 80%;
+        background-color:$black;
+        border-radius:10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__input{
+            flex-basis: 48%; height: 2rem;
+            margin: 0 0 2rem 0;
+            padding: 0 0 0 1rem;
+            background-color: $lightBlack;
+            border: none;
+            border-left: 2px solid $lightGreen;
+            border-right: 2px solid $lightGreen;
+            border-radius: 10px;
+            font-family: $titleFont;
+            color: $lightGreen;
+            transition: .5s;
+
+            &--textarea{
+                flex-basis: 100%; height: auto;
+                padding: 1rem 0 1rem 1rem;
+            }
+
+            &:focus{
+                outline: none;
+                border-left: 10px solid $lightGreen;
+                border-right: 10px solid $lightGreen;
+            }
+        }
+
+        &__button{
+            margin: 0 auto;
+            padding: .5rem 1rem;
+            font-family: $titleFont;
+            color: $lightGreen;
+            background-color: $lightBlack;
+            border: 2px solid $lightGreen;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: .5s;
+
+            &:hover{
+                color: $lightBlack;
+                background-color: $lightGreen;
+            }
+        }
+    }
+}

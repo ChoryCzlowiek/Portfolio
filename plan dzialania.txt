@@ -1,0 +1,22 @@
+about - o mnie, zainteresowania, szkola(progress bar i po bokach gdzie sié uczyłem)
+pilka - po kolei kariera ze zdjeciami(https://jjcreator.dev/?fbclid=IwAR0HoMfzqo1tWHJhOL2eUOt70HXhABtOw8HSQdCXvCKQGRVkpDq9dIfKgDw)
+skills - skille te ktore nie do konca to paski a te ktore znam to kolka(https://www.youtube.com/watch?v=NC4kRY1GN8g&fbclid=IwAR3Hi7f9uPuWrDe35SLNawgNVnNDbt36_xsEfr9JiJiiCseWujXc5Ktrlzw)
+projects - projekty
+message - wiadomosc
+
+
+skills:
+html
+css
+js
+react
+node
+express
+mongodb
+
+znam:
+postman
+vsc
+scss
+BEM
+npm

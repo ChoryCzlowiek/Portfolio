@@ -1,0 +1,55 @@
+.football{
+    position:absolute;
+    padding: 0 0 5rem 0;
+    width: 91%; min-height: 100vh;
+    top: 0; left: 100%;
+    background-color:$lightBlack;
+    display: none;
+
+    &__title{
+        margin: 4rem 0;
+        text-align:center;
+        font-family: $titleFont;
+        letter-spacing:1px;
+        font-size:3.5rem;
+        position:relative;
+
+        &::before{
+        content:'';
+        position:absolute;
+        top: 100%; left: 45%;
+        height: 2px; width: 10%;
+        background-color:$lightGreen;
+        }
+    }
+
+    &__career-box{
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        border-bottom: 5px dashed $lightGreen;
+        display: flex;
+        align-items: center;
+        transform: translateX(200%);
+        transition: 1s;
+    }
+
+    &__image{
+        height: 40vh;
+        border-radius: 10%;
+
+        &--right{
+            order: 2;
+        }
+    }
+
+    &__text{
+        margin: 0 0 0 3rem;
+        line-height: 30px;
+        text-indent: 2rem;
+
+        &--left{
+            margin: 0 5rem 0 0;
+        }
+    }
+}

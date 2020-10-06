@@ -1,0 +1,58 @@
+.cv-box{
+    position: fixed;
+    top: 40vh; left: 100%;
+    width: 10%;
+    padding: 1rem 0;
+    background-color: $black;
+    transition: .5s;
+    z-index: 99;
+    text-align: center;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        transform: translateX(-100%);
+        height: 5vh; width: 2.5rem;
+        background-color: $lightGreen;
+        border-radius: 50% 0 0 50%;
+    }
+
+    &::after{
+        content: 'CV';
+        position: absolute;
+        top: 0; left: 0;
+        transform: translateX(-100%);
+        height: 5vh; width: 2.5rem;
+        text-align: center;
+        line-height: 5vh;
+        font-size: 1.5rem;
+        font-family: $titleFont;
+        color: $lightBlack;
+        animation: pulsingLetters .3s linear infinite;
+    }
+
+    &:hover{
+        transform: translateX(-100%);
+    }
+
+    &__img{
+        margin: 0 15% 1rem;
+        width: 70%;
+    }
+
+    &__download{
+        text-decoration: none;
+        padding: .2rem .3rem;
+        color: $lightGreen;
+        font-family: $titleFont;
+        border: 2px solid $lightGreen;
+        background-color: $black;
+        transition: .5s;
+
+        &:hover{
+            color: $black;
+            background-color: $lightGreen;
+        }
+    }
+}
