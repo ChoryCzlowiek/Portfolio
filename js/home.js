@@ -2,6 +2,7 @@
 
 const navIconsNode = document.querySelectorAll('.navigation__icon');
 const sitesNode = document.querySelectorAll('.site');
+const musicBtn = document.querySelector('.navbar__audio');
 
 // Variables
 
@@ -119,3 +120,33 @@ function switchSite() {
 navIcons.forEach((icon) => {
     icon.addEventListener('click', switchSite);
 });
+
+// Turn on music
+
+musicBtn.addEventListener('click', () => {
+
+    const music = new Audio('../music/music.mp3');
+
+    console.log(music)
+
+    if (musicBtn.classList.contains('fa-stop')) {
+
+        music.pause();
+        music.currentTime = 0.0;
+
+        musicBtn.classList.remove('fa-stop');
+        musicBtn.classList.add('fa-volume-up');
+        console.log('pause')
+
+    }
+    else if (musicBtn.classList.contains('fa-volume-up')) {
+
+        music.play();
+
+        musicBtn.classList.add('fa-stop');
+        musicBtn.classList.remove('fa-volume-up');
+        console.log('play')
+
+    }
+
+})
