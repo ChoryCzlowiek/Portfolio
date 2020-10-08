@@ -646,8 +646,9 @@ body {
   width: 91%;
   min-height: 100vh;
   top: 0;
-  left: 9%;
+  left: 100%;
   background-color: #1a1a1a;
+  display: none;
 }
 
 .skills__title {
@@ -810,6 +811,10 @@ body {
   left: 80%;
 }
 
+.skills .additional-skills-box__img-background--git {
+  left: 100%;
+}
+
 .skills .additional-skills-box__img-background:hover {
   -webkit-box-shadow: 0 0 20px #66ff66;
           box-shadow: 0 0 20px #66ff66;
@@ -841,6 +846,10 @@ body {
 
 .skills .additional-skills-box__img-background:nth-of-type(5):before {
   content: 'npm';
+}
+
+.skills .additional-skills-box__img-background:nth-of-type(6):before {
+  content: 'Github';
 }
 
 .skills .additional-skills-box__img {

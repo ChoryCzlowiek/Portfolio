@@ -2,9 +2,9 @@
     position:absolute;
     padding: 0 0 5rem 0;
     width: 91%; min-height: 100vh;
-    top: 0; left: 9%;
+    top: 0; left: 100%;
     background-color:$lightBlack;
-    // display: none;
+    display: none;
 
     &__title{
         margin: 4rem 0;
@@ -146,6 +146,10 @@
                 left: 80%;
             }
 
+            &--git{
+                left: 100%;
+            }
+
             &:hover{
                 box-shadow: 0 0 20px $lightGreen;
             }
@@ -174,6 +178,9 @@
 
             &:nth-of-type(5):before{
                 content: 'npm';
+            }
+            &:nth-of-type(6):before{
+                content: 'Github';
             }
         }
 
