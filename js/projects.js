@@ -32,5 +32,11 @@ function projectHover() {
     circle.style.opacity = '.6';
 }
 
-projectsNode.forEach(project => project.addEventListener('mouseover', projectHover));
-projectsNode.forEach(project => project.addEventListener('mouseleave', mouseLeaveProject));
+function projectsHoverFunctions() {
+
+    projectsNode.forEach(project => project.addEventListener('mouseover', projectHover));
+    projectsNode.forEach(project => project.addEventListener('mouseleave', mouseLeaveProject));
+
+};
+
+export default projectsHoverFunctions();

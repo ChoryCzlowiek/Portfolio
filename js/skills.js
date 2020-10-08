@@ -64,7 +64,7 @@ function animatePercents() {
 
 function animateSkillsProgress() {
 
-    if (skillsSite.style.display = 'block') {
+    if (window.getComputedStyle(skillsSite, null).getPropertyValue("display") == 'block') {
 
         setTimeout(() => {
 
@@ -77,4 +77,4 @@ function animateSkillsProgress() {
 
 }
 
-animateSkillsProgress();
+export default animateSkillsProgress();

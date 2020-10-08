@@ -1,3 +1,9 @@
+// Import JS files
+
+import showFootballBoxes from './football';
+import animateSkillsProgress from './skills';
+import projectsHoverFunctions from './projects'
+
 // DOM References
 
 const navIconsNode = document.querySelectorAll('.navigation__icon');
@@ -116,10 +122,22 @@ function switchSite() {
     else setTimeout(() => { navIcons.forEach(icon => icon.style.pointerEvents = 'auto'); }, 1000)
 }
 
+// Main function of the site
+
+function mainFunction() {
+
+    switchSite();
+
+    showFootballBoxes();
+    animateSkillsProgress();
+    projectsHoverFunctions();
+
+}
+
 // Click icon efect
 
 navIcons.forEach((icon) => {
-    icon.addEventListener('click', switchSite);
+    icon.addEventListener('click', mainFunction);
 });
 
 // Turn on music
