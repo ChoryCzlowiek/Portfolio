@@ -8,6 +8,7 @@ const musicBtn = document.querySelector('.navbar__audio');
 
 const navIcons = [...navIconsNode];
 const sites = [...sitesNode];
+const music = new Audio('../music/music.mp3');
 
 // Change job name on home site
 
@@ -124,8 +125,6 @@ navIcons.forEach((icon) => {
 // Turn on music
 
 musicBtn.addEventListener('click', () => {
-
-    const music = new Audio('../music/music.mp3');
 
     console.log(music)
 
