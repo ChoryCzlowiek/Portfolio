@@ -1,8 +1,8 @@
 // Import JS files
 
-import showFootballBoxes from './football';
-import animateSkillsProgress from './skills';
-import projectsHoverFunctions from './projects'
+import { showFootballBoxes } from './football.js';
+import { animateSkillsProgress } from './skills.js';
+import { projectsHoverFunctions } from './projects.js'
 
 // DOM References
 
@@ -14,6 +14,7 @@ const musicBtn = document.querySelector('.navbar__audio');
 
 const navIcons = [...navIconsNode];
 const sites = [...sitesNode];
+let isTheSameSite = false;
 const music = new Audio('../music/music.mp3');
 
 // Change job name on home site
@@ -51,9 +52,13 @@ function changeOldIcon() {
 
 // Remove site from window and hideSite animation
 
-function moveOutSite() {
+function moveOutSite(iconId) {
 
     const oldSite = sites.find(site => site.classList.contains('active-site'));
+    console.log(oldSite);
+
+    if (oldSite && oldSite.classList.contains(iconId)) isTheSameSite = true;
+    else isTheSameSite = false;
 
     if (oldSite) {
 
@@ -95,9 +100,11 @@ function moveInSite(iconId, ifOldSite) {
     }
 }
 
-// Switch site main function
+// Main function of the site
 
-function switchSite() {
+function mainFunction() {
+
+    window.scrollTo(0, 0);
 
     navIcons.forEach(icon => icon.style.pointerEvents = 'none');
 
@@ -116,17 +123,10 @@ function switchSite() {
 
     const iconId = this.id;
 
-    const ifOldSite = moveOutSite();
+    const ifOldSite = moveOutSite(iconId);
 
-    if (iconId != 'home') moveInSite(iconId, ifOldSite);
-    else setTimeout(() => { navIcons.forEach(icon => icon.style.pointerEvents = 'auto'); }, 1000)
-}
-
-// Main function of the site
-
-function mainFunction() {
-
-    switchSite();
+    if (iconId != 'home' && isTheSameSite == false) moveInSite(iconId, ifOldSite);
+    else setTimeout(() => { navIcons.forEach(icon => icon.style.pointerEvents = 'auto') }, 1000)
 
     showFootballBoxes();
     animateSkillsProgress();
@@ -140,29 +140,29 @@ navIcons.forEach((icon) => {
     icon.addEventListener('click', mainFunction);
 });
 
+// Change autoplay music on true and load it
+
+music.autoplay = true;
+music.load();
+
 // Turn on music
 
 musicBtn.addEventListener('click', () => {
 
-    console.log(music)
-
-    if (musicBtn.classList.contains('fa-stop')) {
+    if (musicBtn.classList.contains('fa-volume-mute')) {
 
         music.pause();
         music.currentTime = 0.0;
 
-        musicBtn.classList.remove('fa-stop');
+        musicBtn.classList.remove('fa-volume-mute');
         musicBtn.classList.add('fa-volume-up');
-        console.log('pause')
 
-    }
-    else if (musicBtn.classList.contains('fa-volume-up')) {
+    } else if (musicBtn.classList.contains('fa-volume-up')) {
 
         music.play();
 
-        musicBtn.classList.add('fa-stop');
+        musicBtn.classList.add('fa-volume-mute');
         musicBtn.classList.remove('fa-volume-up');
-        console.log('play')
 
     }
 

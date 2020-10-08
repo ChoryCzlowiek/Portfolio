@@ -39,4 +39,4 @@ function projectsHoverFunctions() {
 
 };
 
-export default projectsHoverFunctions();
+export { projectsHoverFunctions };

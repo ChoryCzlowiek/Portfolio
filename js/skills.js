@@ -71,10 +71,10 @@ function animateSkillsProgress() {
             animateProgressBar();
             animatePercents();
 
-        }, 1000)
+        }, 2000)
 
     }
 
 }
 
-export default animateSkillsProgress();
+export { animateSkillsProgress };

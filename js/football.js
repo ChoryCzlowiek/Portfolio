@@ -14,4 +14,4 @@ function showFootballBoxes() {
 
 }
 
-export default showFootballBoxes();
+export { showFootballBoxes };

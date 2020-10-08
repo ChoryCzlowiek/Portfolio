@@ -50,8 +50,8 @@ body {
 .cv-box {
   position: fixed;
   top: 40vh;
-  left: 100%;
-  width: 10%;
+  left: 100vw;
+  width: 10vw;
   padding: 1rem 0;
   background-color: #0a0a0a;
   -webkit-transition: .5s;
@@ -121,7 +121,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -142,7 +142,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 9%;
+  width: 9vw;
   height: 100vh;
   background-color: #0a0a0a;
   opacity: .9;
@@ -379,10 +379,10 @@ body {
 .about {
   position: absolute;
   padding: 0 0 5rem 0;
-  width: 91%;
+  width: 91vw;
   min-height: 100vh;
   top: 0;
-  left: 100%;
+  left: 100vw;
   background-color: #1a1a1a;
   display: none;
 }
@@ -575,10 +575,10 @@ body {
 .football {
   position: absolute;
   padding: 0 0 5rem 0;
-  width: 91%;
+  width: 91vw;
   min-height: 100vh;
   top: 0;
-  left: 100%;
+  left: 100vw;
   background-color: #1a1a1a;
   display: none;
 }
@@ -643,10 +643,10 @@ body {
 .skills {
   position: absolute;
   padding: 0 0 5rem 0;
-  width: 91%;
+  width: 91vw;
   min-height: 100vh;
   top: 0;
-  left: 100%;
+  left: 100vw;
   background-color: #1a1a1a;
   display: none;
 }
@@ -869,10 +869,10 @@ body {
 .projects {
   position: absolute;
   padding: 0 0 5rem 0;
-  width: 91%;
+  width: 91vw;
   min-height: 100vh;
   top: 0;
-  left: 100%;
+  left: 100vw;
   background-color: #1a1a1a;
   display: none;
 }
@@ -1011,10 +1011,10 @@ body {
 .contact {
   position: absolute;
   padding: 0 0 5rem 0;
-  width: 91%;
+  width: 91vw;
   min-height: 100vh;
   top: 0;
-  left: 100%;
+  left: 100vw;
   background-color: #1a1a1a;
   display: none;
 }
