@@ -194,64 +194,74 @@
         <div class="skills__tech-box tech-box">
             <div class="tech-box__technology">
                 <p class="tech-box__name">HTML</p>
-                <div class="tech-box__progress-bar"></div>
+                <div class="tech-box__progress-bar progress-bar">
+                    <div id="90" class="progress-bar__progress"></div>
+                    <p id="90" class="progress-bar__percents"></p>
+                </div>
             </div>
             <div class="tech-box__technology">
                 <p class="tech-box__name">CSS</p>
-                <div class="tech-box__progress-bar tech-box__progress-bar--css"></div>
+                <div class="tech-box__progress-bar progress-bar">
+                    <div id="90" class="progress-bar__progress progress-bar__progress--css"></div>
+                    <p id="90" class="progress-bar__percents progress-bar__percents--css"></p>
+                </div>
             </div>
             <div class="tech-box__technology">
                 <p class="tech-box__name">JavaScript</p>
-                <div class="tech-box__progress-bar tech-box__progress-bar--js"></div>
+                <div class="tech-box__progress-bar progress-bar">
+                    <div id="80" class="progress-bar__progress progress-bar__progress--js"></div>
+                    <p id="80" class="progress-bar__percents progress-bar__percents--js"></p>
+                </div>
             </div>
             <div class="tech-box__technology">
                 <p class="tech-box__name">React</p>
-                <div class="tech-box__progress-bar tech-box__progress-bar--react"></div>
+                <div class="tech-box__progress-bar progress-bar">
+                    <div id="60" class="progress-bar__progress progress-bar__progress--react"></div>
+                    <p id="60" class="progress-bar__percents progress-bar__percents--react"></p>
+                </div>
             </div>
             <div class="tech-box__technology">
                 <p class="tech-box__name">NodeJS</p>
-                <div class="tech-box__progress-bar tech-box__progress-bar--node"></div>
+                <div class="tech-box__progress-bar progress-bar">
+                    <div id="50" class="progress-bar__progress progress-bar__progress--node"></div>
+                    <p id="50" class="progress-bar__percents progress-bar__percents--node"></p>
+                </div>
             </div>
             <div class="tech-box__technology">
                 <p class="tech-box__name">ExpressJS</p>
-                <div class="tech-box__progress-bar tech-box__progress-bar--express"></div>
+                <div class="tech-box__progress-bar progress-bar">
+                    <div id="50" class="progress-bar__progress progress-bar__progress--express"></div>
+                    <p id="50" class="progress-bar__percents progress-bar__percents--express"></p>
+                </div>
             </div>
             <div class="tech-box__technology">
                 <p class="tech-box__name">MongoDB</p>
-                <div class="tech-box__progress-bar tech-box__progress-bar--mongo"></div>
+                <div class="tech-box__progress-bar progress-bar">
+                    <div id="70" class="progress-bar__progress progress-bar__progress--mongo"></div>
+                    <p id="70" class="progress-bar__percents progress-bar__percents--mongo"></p>
+                </div>
             </div>
         </div>
 
         <h3 class="skills__subtitle">Znam także</h3>
         <div class="skills__additional-skills-box additional-skills-box">
-            <div class="additional-skills-box__technology">
-                <div class="additional-skills-box__circle">
-                    <p class="additional-skills-box__name">VSC</p>
+
+            <div class="additional-skills-box__line">
+                <div class="additional-skills-box__img-background">
                     <img src="./images/vsc.png" alt="" class="additional-skills-box__img">
                 </div>
-            </div>
-            <div class="additional-skills-box__technology">
-                <div class="additional-skills-box__circle">
-                    <p class="additional-skills-box__name">BEM</p>
+                <div class="additional-skills-box__img-background additional-skills-box__img-background--bem">
                     <img src="./images/BEM.png" alt="" class="additional-skills-box__img">
                 </div>
-            </div>
-            <div class="additional-skills-box__technology">
-                <div class="additional-skills-box__circle">
-                    <p class="additional-skills-box__name">Postman</p>
+                <div class="additional-skills-box__img-background additional-skills-box__img-background--postman">
                     <img src="./images/postman.png" alt="" class="additional-skills-box__img">
                 </div>
-            </div>
-            <div class="additional-skills-box__technology">
-                <div class="additional-skills-box__circle">
-                    <p class="additional-skills-box__name">SASS/SCSS</p>
+                <div class="additional-skills-box__img-background additional-skills-box__img-background--scss">
                     <img src="./images/scss.png" alt="" class="additional-skills-box__img">
                 </div>
-            </div>
-            <div class="additional-skills-box__technology">
-                <div class="additional-skills-box__circle">
-                    <p class="additional-skills-box__name">npm</p>
-                    <img src="./images/npm.png" alt="" class="additional-skills-box__img">
+                <div class="additional-skills-box__img-background additional-skills-box__img-background--npm">
+                    <img src="./images/npm.png" alt=""
+                        class="additional-skills-box__img additional-skills-box__img--npm">
                 </div>
             </div>
         </div>
@@ -351,6 +361,7 @@
 
     <script src="./js/home.js"></script>
     <script src="./js/football.js"></script>
+    <script src="./js/skills.js"></script>
     <script src="./js/projects.js"></script>
 </body>
 

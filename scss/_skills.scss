@@ -2,9 +2,9 @@
     position:absolute;
     padding: 0 0 5rem 0;
     width: 91%; min-height: 100vh;
-    top: 0; left: 100%;
+    top: 0; left: 9%;
     background-color:$lightBlack;
-    display: none;
+    // display: none;
 
     &__title{
         margin: 4rem 0;
@@ -42,74 +42,45 @@
             margin: 0 0 .5rem 0;
         }
 
-        &__progress-bar{
+        .progress-bar{
             width: 100%; height: 2vh;
             background-color: $lightBlack;
             border-radius: 10px;
             margin: 0 0 2rem 0;
             position: relative;
 
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0; left: 0;
-                height: 100%; width: 90%;
+            &__progress{
+                height: 100%; width: 0;
                 background-color: $lightGreen;
                 border-radius: 10px;
             }
 
-            &::after{
-                content: '90%';
+            &__percents{
                 position: absolute;
-                top: -1.5rem; left: 90%;
+                top: 115%; left: 90%;
                 transform: translateX(-50%);
                 color: $lightGreen;
                 font-family: $titleFont;
-            }
 
-            &--js::before{
-                width: 80%;
-            }
+                &--js{
+                    left: 80%;
+                }
 
-            &--js::after{
-                content: '80%';
-                left: 80%;
-            }
+                &--react{
+                    left: 60%;
+                }
 
-            &--react::before{
-                width: 60%;
-            }
+                &--node{
+                    left: 50%;
+                }
 
-            &--react::after{
-                content: '60%';
-                left: 60%;
-            }
+                &--express{
+                    left: 50%;
+                }
 
-            &--node::before{
-                width: 50%;
-            }
-
-            &--node::after{
-                content: '50%';
-                left: 50%;
-            }
-
-            &--express::before{
-                width: 50%;
-            }
-
-            &--express::after{
-                content: '50%';
-                left: 50%;
-            }
-
-            &--mongo::before{
-                width: 70%;
-            }
-
-            &--mongo::after{
-                content: '70%';
-                left: 70%;
+                &--mongo{
+                    left: 70%;
+                }
             }
 
             &--last{
@@ -139,37 +110,82 @@
     .additional-skills-box{
         margin: 0 auto;
         padding: 2rem 1rem;
-        width: 60%;
+        width: 80%;
         background-color: $black;
         border-radius:10px;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
 
-        &__technology{
-            flex-basis: 50%;
+        &__line{
+            width: 90%;
+            margin: 2rem auto 5rem;
+            border-bottom: 5px solid $lightBlack;
+            position: relative;
+        }
 
-            &:nth-of-type(3){
-                flex-basis: 100%;
+        &__img-background{
+            position: absolute;
+            bottom: 0; left: 0;
+            transform: translate(-50%, 50%);
+            width: 5rem; height: 5rem;
+            background-color: $lightBlack;
+            border-radius: 20px;
+            box-sizing: content-box;
+
+            &--bem{
+                left: 20%;
+            }
+
+            &--postman{
+                left: 40%;
+            }
+
+            &--scss{
+                left: 60%;
+            }
+
+            &--npm{
+                left: 80%;
+            }
+
+            &:hover{
+                box-shadow: 0 0 20px $lightGreen;
+            }
+
+            &:before{
+                content: 'VSC';
+                position: absolute;
+                top: 110%; left: 50%;
+                transform: translateX(-50%);
+                color: $lightGreen;
+                font-family: $titleFont;
+                font-size: 1.3rem;
+            }
+
+            &:nth-of-type(2):before{
+                content: 'BEM';
+            }
+
+            &:nth-of-type(3):before{
+                content: 'Postman';
+            }
+
+            &:nth-of-type(4):before{
+                content: 'SASS/SCSS';
+            }
+
+            &:nth-of-type(5):before{
+                content: 'npm';
             }
         }
 
-        &__circle{
-            margin: 0 auto;
-            width:10rem; height:10rem;
-            border: 5px solid $lightGreen;
-            border-radius: 50%;
-            box-shadow: 0 0 10px green, 0 0 30px green;
-        }
-
-        &__name{
-            margin: 2rem 0 .5rem;
-            font-size: 1.4rem;
-            font-family: $titleFont;
-        }
-
         &__img{
-            width: 3.5rem; height: 3.5rem;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            width: 3rem; height: 3rem;
+
+            &--npm{
+                width: 3.5rem;
+            }
         }
     }
 }
