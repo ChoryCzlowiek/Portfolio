@@ -140,29 +140,24 @@ navIcons.forEach((icon) => {
     icon.addEventListener('click', mainFunction);
 });
 
-// Change autoplay music on true and load it
-
-music.autoplay = true;
-music.load();
-
 // Turn on music
 
 musicBtn.addEventListener('click', () => {
 
-    if (musicBtn.classList.contains('fa-volume-mute')) {
+    if (musicBtn.classList.contains('fa-volume-up')) {
 
         music.pause();
         music.currentTime = 0.0;
 
-        musicBtn.classList.remove('fa-volume-mute');
-        musicBtn.classList.add('fa-volume-up');
+        musicBtn.classList.add('fa-volume-mute');
+        musicBtn.classList.remove('fa-volume-up');
 
-    } else if (musicBtn.classList.contains('fa-volume-up')) {
+    } else if (musicBtn.classList.contains('fa-volume-mute')) {
 
         music.play();
 
-        musicBtn.classList.add('fa-volume-mute');
-        musicBtn.classList.remove('fa-volume-up');
+        musicBtn.classList.remove('fa-volume-mute');
+        musicBtn.classList.add('fa-volume-up');
 
     }
 
