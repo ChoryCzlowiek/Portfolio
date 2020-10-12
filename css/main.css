@@ -932,6 +932,10 @@ body {
   background-image: url("../images/estetic.PNG");
 }
 
+.projects .prjs-container .project__img--mamma {
+  background-image: url("../images/mamma-mia.PNG");
+}
+
 .projects .prjs-container .project__img--portfolio {
   background-image: url("../images/portfolio.PNG");
 }
@@ -991,7 +995,7 @@ body {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: orange;
   -webkit-transition: .5s;
   transition: .5s;
 }

@@ -50,6 +50,10 @@
                     background-image: url('../images/estetic.PNG');
                 }
 
+                &--mamma{
+                    background-image: url('../images/mamma-mia.PNG');
+                }
+
                 &--portfolio{
                     background-image: url('../images/portfolio.PNG');
                 }
@@ -102,7 +106,7 @@
                 bottom: 5%; right: 20%;
                 width: 3rem; height: 3rem;
                 border-radius: 50%;
-                background-color: yellow;
+                background-color: orange;
                 transition: .5s;
 
                 &--orange{

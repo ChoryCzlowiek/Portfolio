@@ -22,9 +22,4 @@ BEM
 npm
 
 1. mamma mia
-2. muzyka nie wlacza się na pcozatku
-3. inna muzyka
-4. ikony muzyki(na odwrot)
 5. samojebka
-6. kolor projektow
-7. ikonka BEM
