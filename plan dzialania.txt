@@ -21,5 +21,8 @@ scss
 BEM
 npm
 
-1. mamma mia
 5. samojebka
+
+Node:
+zrobic fetcha w contact
+zobaczyc czy sie zapisuje w bazie

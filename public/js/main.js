@@ -55,7 +55,6 @@ function changeOldIcon() {
 function moveOutSite(iconId) {
 
     const oldSite = sites.find(site => site.classList.contains('active-site'));
-    console.log(oldSite);
 
     if (oldSite && oldSite.classList.contains(iconId)) isTheSameSite = true;
     else isTheSameSite = false;

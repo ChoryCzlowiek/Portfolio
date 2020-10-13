@@ -354,9 +354,9 @@
     <div class="contact site">
 
         <h2 class="contact__title">Kontakt</h2>
-        <form class="contact__form form">
-            <input type="text" placeholder="Imię" class="form__input">
-            <input type="text" placeholder="Nazwisko" class="form__input">
+        <form onsubmit="sendMessage(event)" class="contact__form form">
+            <input type="text" placeholder="Imię" class="form__input form__input--name">
+            <input type="text" placeholder="Nazwisko" class="form__input form__input--last-name">
             <textarea placeholder="Napisz wiadomość..." cols="30" rows="10"
                 class="form__input form__input--textarea"></textarea>
             <button class="form__button" type="submit">Wyślij</button>
@@ -365,6 +365,7 @@
     </div>
 
     <script type='module' src="./js/main.js"></script>
+    <script src="./js/contact.js"></script>
 </body>
 
 </html>
