@@ -2,9 +2,31 @@
     position:absolute;
     padding: 0 0 5rem 0;
     width: 91vw; min-height: 100vh;
-    top: 0; left: 100vw;
+    top: 0; left: 9vw;
     background-color:$lightBlack;
-    display: none;
+    // display: none;
+
+    &__message-info-box{
+        position: absolute;
+        top: 0; left: 50%;
+        transform: translate(-50%, -100%);
+        background-color: $lightGreen;
+        border: 3px solid $black;
+        border-top: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: 1s;
+
+        &--active{
+        animation: showMessageInfo 4s;
+        }
+    }
+
+    &__message-info{
+        padding: .5rem 2rem;
+        color: $black;
+        font-family: $titleFont;
+    }
 
     &__title{
         margin: 4rem 0;
@@ -74,6 +96,19 @@
                 color: $lightBlack;
                 background-color: $lightGreen;
             }
+
+            &:focus{
+                outline: none;
+            }
         }
+    }
+}
+
+@keyframes showMessageInfo{
+    0%{
+        transform: translate(-50%, -100%);
+    }
+    20%,100%{
+        transform: translate(-50%, 0%);
     }
 }
