@@ -1018,8 +1018,9 @@ body {
   width: 91vw;
   min-height: 100vh;
   top: 0;
-  left: 9vw;
+  left: 100vw;
   background-color: #1a1a1a;
+  display: none;
 }
 
 .contact__message-info-box {
