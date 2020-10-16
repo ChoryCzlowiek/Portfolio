@@ -17,30 +17,6 @@ const sites = [...sitesNode];
 let isTheSameSite = false;
 const music = new Audio('../music/music.mp3');
 
-// Change job name on home site
-
-function changeJobName() {
-
-    const jobName = document.querySelector('.home__subtitle--job');
-    const jobs = ['Piłkarzem', 'Programistą', 'Freelancerem'];
-    let i = 1;
-
-    jobName.innerHTML = jobs[0];
-
-    setInterval(() => {
-        if (i > 2) {
-            i = 0;
-        }
-
-        jobName.innerHTML = jobs[i];
-        i++;
-    }, 4000)
-};
-
-setTimeout(() => {
-    changeJobName();
-}, 2000);
-
 // Remove active style of old icon
 
 function changeOldIcon() {

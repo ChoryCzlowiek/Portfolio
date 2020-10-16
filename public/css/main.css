@@ -259,12 +259,15 @@ body {
   text-shadow: 0 0 10px white;
 }
 
-.home__title {
+.home__titles-box {
   position: absolute;
-  top: 40vh;
-  left: 35%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  top: 50%;
+  left: 54.5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.home__title {
   font-family: "Acme", cursive;
   font-size: 7rem;
   color: white;
@@ -272,77 +275,68 @@ body {
 }
 
 .home__subtitle {
-  position: absolute;
-  top: 55vh;
-  left: 35%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
   font-family: "Acme", cursive;
   font-size: 4rem;
   color: white;
 }
 
-.home__subtitle--job {
-  display: inline-block;
+.home .job-box {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.home .job-box__job {
+  position: absolute;
   color: #66ff66;
   text-shadow: 0 0 5px #0a0a0a;
-  -webkit-animation: changeJobTitle 4s linear infinite;
-          animation: changeJobTitle 4s linear infinite;
+  opacity: 0;
+  -webkit-animation: changeJob 9s linear 0s infinite;
+          animation: changeJob 9s linear 0s infinite;
 }
 
-@-webkit-keyframes changeJobTitle {
+.home .job-box__job--second {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.home .job-box__job--third {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+@-webkit-keyframes changeJob {
   0% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+    opacity: 0;
   }
-  10% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  8.25%, 24.75% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
   }
-  50% {
-    color: #1a1a1a;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  90% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  33%, 100% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+    opacity: 0;
   }
 }
 
-@keyframes changeJobTitle {
+@keyframes changeJob {
   0% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translate(0, 100px);
+            transform: translate(0, 100px);
+    opacity: 0;
   }
-  10% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  8.25%, 24.75% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
   }
-  50% {
-    color: #1a1a1a;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  90% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    color: #66ff66;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  33%, 100% {
+    -webkit-transform: translate(100px, 0);
+            transform: translate(100px, 0);
+    opacity: 0;
   }
 }
 

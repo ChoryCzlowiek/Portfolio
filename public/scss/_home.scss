@@ -107,11 +107,13 @@
         }
     }
 
-    &__title{
+    &__titles-box{
         position: absolute;
-        top: 40vh;
-        left: 35%;
-        transform: translate(0, -50%);
+        top: 50%; left:54.5%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__title{
         font-family: $titleFont;
         font-size: 7rem;
         color: white;
@@ -119,47 +121,45 @@
     }
 
     &__subtitle{
-        position: absolute;
-        top: 55vh;
-        left:35%;
-        transform: translate(0, -50%);
         font-family: $titleFont;
         font-size: 4rem;
         color: white;
+    }
 
-        &--job{
-            display: inline-block;
+    .job-box{
+        display: inline;
+        margin-left: 1rem;
+
+        &__job{
+            position: absolute;
             color: $lightGreen;
             text-shadow: 0 0 5px $black;
-            animation: changeJobTitle 4s linear infinite;
+            opacity: 0;
+            animation: changeJob 9s linear 0s infinite;
+
+            &--second{
+                animation-delay: 3s;
+            }
+
+            &--third{
+                animation-delay: 6s;
+            }
         }
     }
 }
 
-@keyframes changeJobTitle{
+@keyframes changeJob{
     0%{
-        color: $lightGreen;
-        transform: scale(1);
+        transform: translate(0, 100px);
+        opacity: 0;
     }
-
-    10%{
-        color: $lightGreen;
-        transform: scale(1);
+    8.25%, 24.75%{
+        transform: translate(0, 0);
+        opacity: 1;
     }
-
-    50%{
-        color: $lightBlack;
-        transform: scale(0);
-    }
-
-    90%{
-        color: $lightGreen;
-        transform: scale(1);
-    }
-
-    100%{
-        color: $lightGreen;
-        transform: scale(1);
+    33% ,100%{
+        transform: translate(100px, 0);
+        opacity: 0;
     }
 }
 
