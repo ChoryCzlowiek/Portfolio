@@ -21,8 +21,9 @@ scss
 BEM
 npm
 
-5. samojebka
-
-Node:
-zrobic fetcha w contact
-zobaczyc czy sie zapisuje w bazie
+Co zrobic:
+- gramatyka tekstu,
+- zdjecie,
+- podlaczenie bazy,
+- favicon,
+- ladowanie obrazkow
