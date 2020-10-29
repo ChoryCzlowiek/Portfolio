@@ -39,7 +39,7 @@
 
             &__img{
                 width: 80%; height: 100%;
-                background-image: url('../images/Mini-kasyno.PNG');
+                background-image: url('../images/Mini-kasyno.jpg');
                 background-size: cover;
                 background-position: center;
                 filter: grayscale(100%);
@@ -47,15 +47,15 @@
                 transition: .5s;
 
                 &--estetic{
-                    background-image: url('../images/estetic.PNG');
+                    background-image: url('../images/estetic.jpg');
                 }
 
                 &--mamma{
-                    background-image: url('../images/mamma-mia.PNG');
+                    background-image: url('../images/mamma-mia.jpg');
                 }
 
                 &--portfolio{
-                    background-image: url('../images/portfolio.PNG');
+                    background-image: url('../images/portfolio.jpg');
                 }
             }
 

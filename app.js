@@ -5,16 +5,17 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const {
-    PORT
+    PORT,
+    DB_CONNECTION_STRING
 } = process.env;
 
-mongoose.connect('mongodb://localhost/portfolio', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(DB_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection error:'));
 db.once('open', function () {
     console.log(
-        `Successfully connected to the MongoDB at ${process.env.DB_CONNECTION_STRING}`
+        `Successfully connected to the MongoDB at ${DB_CONNECTION_STRING}`
     );
 });
 

@@ -912,7 +912,7 @@ body {
 .projects .prjs-container .project__img {
   width: 80%;
   height: 100%;
-  background-image: url("../images/Mini-kasyno.PNG");
+  background-image: url("../images/Mini-kasyno.jpg");
   background-size: cover;
   background-position: center;
   -webkit-filter: grayscale(100%);
@@ -923,15 +923,15 @@ body {
 }
 
 .projects .prjs-container .project__img--estetic {
-  background-image: url("../images/estetic.PNG");
+  background-image: url("../images/estetic.jpg");
 }
 
 .projects .prjs-container .project__img--mamma {
-  background-image: url("../images/mamma-mia.PNG");
+  background-image: url("../images/mamma-mia.jpg");
 }
 
 .projects .prjs-container .project__img--portfolio {
-  background-image: url("../images/portfolio.PNG");
+  background-image: url("../images/portfolio.jpg");
 }
 
 .projects .prjs-container .project__title {

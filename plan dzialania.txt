@@ -22,7 +22,6 @@ BEM
 npm
 
 Co zrobic:
-- gramatyka tekstu,
 - zdjecie,
 - podlaczenie bazy,
 - favicon,

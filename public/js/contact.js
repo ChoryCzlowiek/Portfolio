@@ -1,9 +1,15 @@
 // Clear inputs after sending a message
 
-function clearInputs(name, lastName, message) {
-    name = '';
-    lastName = '';
-    message = '';
+function clearInputs() {
+
+    const name = document.querySelector('.form__input--name');
+    const lastName = document.querySelector('.form__input--last-name');
+    const message = document.querySelector('.form__input--textarea');
+
+    name.value = '';
+    lastName.value = '';
+    message.value = '';
+
 }
 
 // Unblock button and remove animation class
@@ -51,7 +57,7 @@ function sendMessage(event) {
             .then(res => {
                 if (res.success) {
 
-                    clearInputs(name, lastName, message);
+                    clearInputs();
 
                     messageInfoBox.classList.add('contact__message-info-box--active');
                     messageInfo.innerHTML = 'Wiadomość została wysłana. Odpowiem tak szybko jak mogę.'
