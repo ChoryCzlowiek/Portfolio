@@ -6,7 +6,6 @@
 * [Technologies](#technologies)
 * [Installation](#installation)
 * [Features](#features)
-* [Live view](#live-view)
 * [Contact](#contact)
 
 ## General info
